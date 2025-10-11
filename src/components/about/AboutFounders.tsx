@@ -10,7 +10,7 @@ const AboutFounders = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 cinematic-text-shadow">Meet Our Co-founders</h3>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto">The visionaries behind ContentFarm who turn SaaS stories into revenue-driving video content</p>
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto">The visionaries behind HOOD who turn SaaS stories into revenue-driving video content</p>
         </div>
       <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="cinematic-card p-8 text-center hover-scale border border-white/20 shadow-cinematic">

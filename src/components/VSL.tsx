@@ -83,7 +83,7 @@ const VSL = () => {
   }, {
     company: "Reface",
     author: "Ivan Altsybieiev, Co-founder",
-    quote: "ContentFarm transformed our onboarding experience. The video series increased our trial conversions by 67%.",
+    quote: "HOOD transformed our onboarding experience. The video series increased our trial conversions by 67%.",
     thumbnail: "bg-gradient-to-br from-green-500 to-blue-500",
     duration: "4:32",
     hasVideo: true,

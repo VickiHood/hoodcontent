@@ -54,7 +54,7 @@ const CaseStudies = () => {
     client: "TechFlow Solutions",
     project: "SaaS Platform Launch Campaign",
     mainTestimonialVideo: "8gywrfd4p3",
-    pullQuote: "ContentFarm team is creative, fast and affective.",
+    pullQuote: "HOOD team is creative, fast and affective.",
     beforeAfterVideos: {
       testimonials: {
         before: "uv0619hth3",

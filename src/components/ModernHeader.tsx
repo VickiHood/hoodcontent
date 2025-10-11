@@ -73,7 +73,7 @@ const ModernHeader = () => {
               to="/" 
               className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
             >
-              ContentFarm
+              HOOD
             </Link>
           </div>
           

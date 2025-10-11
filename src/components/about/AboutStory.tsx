@@ -29,7 +29,7 @@ const AboutStory = () => {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-yellow-400">Our Story</h3>
               <p className="text-gray-300 leading-relaxed">
-                Founded in 2024 in the city of Lisbon, Portugal, ContentFarm was born from a simple observation: SaaS companies were struggling to communicate their value proposition through traditional marketing methods.
+                Founded in 2024 in the city of Lisbon, Portugal, HOOD was born from a simple observation: SaaS companies were struggling to communicate their value proposition through traditional marketing methods.
               </p>
             </div>
             

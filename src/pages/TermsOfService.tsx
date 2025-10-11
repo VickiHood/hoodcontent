@@ -10,7 +10,7 @@ const TermsOfService = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none prose-invert">
             <h1 className="text-4xl font-bold text-white border-b-2 border-white/20 pb-4 mb-6 cinematic-text-shadow">
-              Terms of Service for ContentFarm.club
+              Terms of Service for HOOD.club
             </h1>
             <p className="text-lg text-gray-300 mb-8">
               <strong>Effective Date:</strong> 1st of June 2025
@@ -19,7 +19,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-yellow-400 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-300">
-                By using ContentFarm.club, you agree to these Terms and our{' '}
+                By using HOOD.club, you agree to these Terms and our{' '}
                 <a href="/privacy-policy" className="text-yellow-400 hover:underline">Privacy Policy</a>. 
                 If you do not agree, please do not use the Site.
               </p>
@@ -36,7 +36,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-yellow-400 mb-4">3. Intellectual Property</h2>
               <p className="text-gray-300">
-                All content is owned or licensed by ContentFarm.club and may not be reproduced without permission.
+                All content is owned or licensed by HOOD.club and may not be reproduced without permission.
               </p>
             </section>
 
@@ -50,7 +50,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-yellow-400 mb-4">5. Disclaimers</h2>
               <p className="text-gray-300">
-                ContentFarm.club is provided "as is" without warranties. We do not guarantee uninterrupted service.
+                HOOD.club is provided "as is" without warranties. We do not guarantee uninterrupted service.
               </p>
             </section>
 

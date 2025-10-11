@@ -12,9 +12,9 @@ const Career = () => {
   return (
     <div className="min-h-screen cinematic-section">
       <SEO 
-        title="Careers at ContentFarm - Join Our Video Production Team"
-        description="Join ContentFarm's creative team! We're hiring video editors and content strategists for remote positions. Help create amazing video content for SaaS companies worldwide."
-        keywords="ContentFarm careers, video editor jobs, content strategist jobs, remote video production jobs, SaaS marketing jobs"
+        title="Careers at HOOD - Join Our Video Production Team"
+        description="Join HOOD's creative team! We're hiring video editors and content strategists for remote positions. Help create amazing video content for SaaS companies worldwide."
+        keywords="HOOD careers, video editor jobs, content strategist jobs, remote video production jobs, SaaS marketing jobs"
         url="https://contentfarm.club/career"
       />
       

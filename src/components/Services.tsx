@@ -137,7 +137,7 @@ const Services = () => {
               We Fix This in 30 Days or You Don't Pay
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed cinematic-text-shadow">
-              Here's exactly what happens when you work with ContentFarm:
+              Here's exactly what happens when you work with HOOD:
             </p>
           </div>
 

@@ -14,25 +14,25 @@ import AboutWhyChoose from '@/components/about/AboutWhyChoose';
 const AboutUs = () => {
   const faqs = [
     {
-      question: "Where is ContentFarm located?",
-      answer: "ContentFarm is based in Lisbon, Portugal, but we work with SaaS companies worldwide through our remote-first approach."
+      question: "Where is HOOD located?",
+      answer: "HOOD is based in Lisbon, Portugal, but we work with SaaS companies worldwide through our remote-first approach."
     },
     {
-      question: "What makes ContentFarm different from other video agencies?",
+      question: "What makes HOOD different from other video agencies?",
       answer: "We specialize exclusively in SaaS companies and offer a 30-day results guarantee with unlimited revisions and 14-day turnaround times."
     },
     {
-      question: "Who are the founders of ContentFarm?",
-      answer: "ContentFarm was co-founded by Vady Kvitey (Creative Director with 8 years of video production experience) and Julia Yuvchenko (CEO with 12 years of IT startup experience)."
+      question: "Who are the founders of HOOD?",
+      answer: "HOOD was co-founded by Vady Kvitey (Creative Director with 8 years of video production experience) and Julia Yuvchenko (CEO with 12 years of IT startup experience)."
     }
   ];
 
   return (
     <div className="min-h-screen">
       <SEO 
-        title="About ContentFarm - SaaS Video Production Experts | Lisbon, Portugal"
-        description="Learn about ContentFarm's story, mission, and team. Founded in 2024 in Lisbon, we're dedicated to helping SaaS companies scale through high-converting video content."
-        keywords="ContentFarm about, video production team, SaaS marketing experts, Lisbon video agency, Vady Kvitey, Julia Yuvchenko"
+        title="About HOOD - SaaS Video Production Experts | Lisbon, Portugal"
+        description="Learn about HOOD's story, mission, and team. Founded in 2024 in Lisbon, we're dedicated to helping SaaS companies scale through high-converting video content."
+        keywords="HOOD about, video production team, SaaS marketing experts, Lisbon video agency, Vady Kvitey, Julia Yuvchenko"
         url="https://contentfarm.club/about"
       />
       

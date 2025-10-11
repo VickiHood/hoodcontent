@@ -10,7 +10,7 @@ const CookiePolicy = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none prose-invert">
             <h1 className="text-4xl font-bold text-white border-b-2 border-white/20 pb-4 mb-6 cinematic-text-shadow">
-              Cookie Policy for ContentFarm.club
+              Cookie Policy for HOOD.club
             </h1>
             <p className="text-lg text-gray-300 mb-8">
               <strong>Effective Date:</strong> 1st of June 2025

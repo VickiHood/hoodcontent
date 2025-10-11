@@ -27,7 +27,7 @@ const StructuredData = ({ type, data, services, faqs }: StructuredDataProps) => 
             "serviceType": "Video Production",
             "provider": {
               "@type": "Organization",
-              "name": "ContentFarm",
+              "name": "HOOD",
               "url": "https://contentfarm.club"
             },
             "hasOfferCatalog": {
@@ -67,7 +67,7 @@ const StructuredData = ({ type, data, services, faqs }: StructuredDataProps) => 
         structuredData = {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "ContentFarm",
+          "name": "HOOD",
           "url": "https://contentfarm.club",
           "logo": "https://contentfarm.club/lovable-uploads/42844e19-815c-453d-9d1d-66e5ec0590fb.png",
           "description": "Video production agency specializing in SaaS companies",

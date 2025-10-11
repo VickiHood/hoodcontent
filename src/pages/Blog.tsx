@@ -33,7 +33,7 @@ const Blog = () => {
     return (
       <>
         <SEO 
-          title="Blog - ContentFarm"
+          title="Blog - HOOD"
           description="Latest insights, tips, and stories from the world of SaaS video production"
         />
         <ModernHeader />
@@ -71,7 +71,7 @@ const Blog = () => {
   return (
     <>
       <SEO 
-        title="Blog - ContentFarm"
+        title="Blog - HOOD"
         description="Latest insights, tips, and stories from the world of SaaS video production"
       />
       <ModernHeader />

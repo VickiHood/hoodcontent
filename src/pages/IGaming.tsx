@@ -151,7 +151,7 @@ const IGaming = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="IGaming Services | ContentFarm"
+        title="IGaming Services | HOOD"
         description="IGaming strategy, promotions, and platform partnerships. See our partners and what we deliver for operators and affiliates."
         keywords="igaming marketing, casino marketing, sports betting, igaming compliance, player acquisition, igaming CRM"
       />
@@ -163,7 +163,7 @@ const IGaming = () => {
           description: "Comprehensive iGaming marketing and platform services for operators and affiliates",
           provider: {
             "@type": "Organization",
-            name: "ContentFarm"
+            name: "HOOD"
           }
         }} 
       />
@@ -244,7 +244,7 @@ const IGaming = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              Why IGaming with ContentFarm
+              Why IGaming with HOOD
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed text-center">
               We blend compliance-first strategy with sharp creative and analytics. From promos to platform selection, we help operators and affiliates launch faster, acquire efficiently, and retain longer.

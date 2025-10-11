@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <div className="text-2xl font-bold cinematic-gradient-text">
-              ContentFarm
+              HOOD
             </div>
             <p className="text-gray-300">
               We help SaaS startups scale with high-converting video content that drives real business results.
@@ -111,7 +111,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-300 text-sm">© 2025 ContentFarm. All rights reserved.</p>
+            <p className="text-gray-300 text-sm">© 2025 HOOD. All rights reserved.</p>
             <div className="flex gap-6 text-sm text-gray-300">
               <Link to="/privacy-policy" className="hover:text-yellow-400 transition-colors">Privacy Policy</Link>
               <Link to="/terms-of-service" className="hover:text-yellow-400 transition-colors">Terms of Service</Link>

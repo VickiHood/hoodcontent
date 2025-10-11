@@ -15,29 +15,29 @@ const Index = () => {
     {
       name: "Product Demo Videos",
       description: "Turn prospects into customers with demos that showcase your SaaS like never before.",
-      provider: "ContentFarm"
+      provider: "HOOD"
     },
     {
       name: "Explainer & Onboarding Videos",
       description: "Reduce churn by 40% with crystal-clear onboarding that gets users to 'aha!' moments faster.",
-      provider: "ContentFarm"
+      provider: "HOOD"
     },
     {
       name: "Webinars & Event Repurposing",
       description: "Transform one event into 10+ pieces of engaging content that work 24/7 for your business.",
-      provider: "ContentFarm"
+      provider: "HOOD"
     },
     {
       name: "YouTube Content Strategy",
       description: "Build authority and generate leads with YouTube content that ranks on page 1 and converts viewers.",
-      provider: "ContentFarm"
+      provider: "HOOD"
     }
   ];
 
   return (
     <div className="min-h-screen">
       <SEO 
-        title="ContentFarm - Professional SaaS Video Production Agency | Product Demos & Explainer Videos"
+        title="HOOD - Professional SaaS Video Production Agency | Product Demos & Explainer Videos"
         description="Leading SaaS video production agency specializing in high-converting product demos, explainer videos, and onboarding content. 30-day results guarantee. Trusted by top SaaS companies worldwide. Transform your product into engaging video content that drives conversions and reduces churn by 40%."
         keywords="SaaS video production agency, product demo videos, explainer videos, SaaS marketing videos, video content marketing, onboarding videos, product video production, B2B video marketing, software demo videos, SaaS video agency, video production Lisbon Portugal, YouTube content strategy, webinar repurposing, video marketing services"
         url="https://contentfarm.club"

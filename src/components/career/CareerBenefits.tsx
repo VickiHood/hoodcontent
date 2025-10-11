@@ -7,7 +7,7 @@ const CareerBenefits = () => {
     <section className="py-20 cinematic-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4 cinematic-text-shadow">Why Join ContentFarm?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4 cinematic-text-shadow">Why Join HOOD?</h2>
           <p className="text-xl text-gray-300">What makes us a great place to work</p>
         </div>
         

@@ -215,7 +215,7 @@ ${data.callToAction || `Take action on what you've learned about ${data.title.to
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Script Generator - Create Professional Scripts for Any Purpose | ContentFarm"
+        title="Script Generator - Create Professional Scripts for Any Purpose | HOOD"
         description="Generate professional scripts for presentations, sales pitches, webinars, and educational content. Free script generator tool for content creators and professionals."
         keywords="script generator, presentation scripts, sales scripts, webinar scripts, content creation, script writing"
         url="https://contentfarm.club/script-generator"
