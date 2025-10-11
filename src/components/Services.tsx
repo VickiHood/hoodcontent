@@ -254,7 +254,7 @@ const Services = () => {
                          </li>)}
                      </ul>
                     
-                     <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer" className="block mt-auto">
+                     <a href="/contact" className="block mt-auto">
                        <Button className="w-full cinematic-cta font-semibold py-3 group shadow-cinematic hover:shadow-glow transition-all duration-300">
                         Get Your First Video FREE
                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -280,7 +280,7 @@ const Services = () => {
                 </h3>
                 <p className="text-xl text-gray-300 mb-6">Book a call and get a FREE video</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a href="https://calendly.com/kvit/15-minutes-discovery-call?month=2025-06" target="_blank" rel="noopener noreferrer" className="inline-block">
+                  <a href="/contact" className="inline-block">
                     <Button size="lg" className="cinematic-cta text-lg px-8 py-4 font-bold shadow-glow hover:shadow-glow transition-all duration-300">
                       Get Your First Video FREE
                     </Button>

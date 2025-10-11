@@ -20,7 +20,7 @@ const CaseStudyCTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style={{
         animationDelay: '0.2s'
       }}>
-          <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer" className="inline-block cinematic-cta font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl group">
+          <a href="/contact" className="inline-block cinematic-cta font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl group">
             <span className="group-hover:scale-105 transition-transform duration-200 inline-block">
               Start Your Project
             </span>

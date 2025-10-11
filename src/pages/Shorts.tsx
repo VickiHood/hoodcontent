@@ -361,7 +361,7 @@ const Shorts = () => {
               Let's create engaging short-form videos that capture attention and drive results for your SaaS product.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+              <a href="/contact">
                 <Button size="lg" className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-lg px-8 py-4">
                   Get Your Shorts Package
                 </Button>

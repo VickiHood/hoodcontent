@@ -97,7 +97,7 @@ const HowItWorks = () => {
             <p className="text-gray-300 mb-6">
               Book a free strategy call and we'll create a custom video roadmap for your SaaS in just 30 minutes.
             </p>
-            <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+            <a href="/contact">
               <Button size="lg" className="cinematic-cta text-lg px-8 py-4 font-semibold shadow-glow hover:shadow-glow transition-all duration-300">
                 Get Your First Video FREE
               </Button>

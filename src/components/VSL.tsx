@@ -187,7 +187,7 @@ const VSL = () => {
         </div>
 
         <div className="text-center">
-          <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+          <a href="/contact">
             <Button size="lg" className="cinematic-cta text-xl px-10 py-6 shadow-glow hover:shadow-glow">
               Get Your Success Story
             </Button>

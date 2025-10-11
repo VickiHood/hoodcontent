@@ -12,7 +12,7 @@ const PricingCTA = () => {
         <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
           Let&apos;s discuss your project and create a video that drives results for your SaaS business.
         </p>
-        <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+        <a href="/contact">
           <Button size="lg" className="cinematic-cta text-lg px-10 py-6 font-semibold">
             Schedule Free Consultation
           </Button>

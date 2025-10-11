@@ -73,7 +73,7 @@ const Hero = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center mb-16">
-          <Button size="lg" className="cinematic-cta text-lg px-10 py-6 font-semibold shadow-2xl hover:shadow-glow transition-all duration-500 transform hover:scale-105" onClick={() => window.open('https://calendly.com/kvit/15-minutes-discovery-call', '_blank')}>
+          <Button size="lg" className="cinematic-cta text-lg px-10 py-6 font-semibold shadow-2xl hover:shadow-glow transition-all duration-500 transform hover:scale-105" onClick={() => window.location.href = '/contact'}>
             Get Your First Video FREE
           </Button>
         </div>

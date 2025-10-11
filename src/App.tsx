@@ -22,6 +22,7 @@ import BlogPost from "./pages/BlogPost";
 import Blog from "./pages/Blog";
 import VideoProduction from "./pages/VideoProduction";
 import IGaming from "./pages/IGaming";
+import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
         <Route path="/script-generator" element={<ScriptGenerator />} />
           <Route path="/video-production" element={<VideoProduction />} />
           <Route path="/services/igaming" element={<IGaming />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

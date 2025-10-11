@@ -211,7 +211,7 @@ const VideoProduction = () => {
           <p className="text-xl text-muted-foreground mb-16 leading-relaxed max-w-4xl mx-auto">
             Let's create something extraordinary together.
           </p>
-          <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+          <a href="/contact">
             <Button 
               size="lg" 
               className="btn-gradient text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-glow"

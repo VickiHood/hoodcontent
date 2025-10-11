@@ -157,7 +157,7 @@ const CaseStudies = () => {
               <div className="relative">
                 <h2 className="text-3xl font-bold mb-4 cinematic-gradient-text">Ready to Be Our Next Success Story?</h2>
                 <p className="text-xl mb-6 text-gray-200">Join 50+ companies that have transformed their growth with our video strategies</p>
-                <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer" className="inline-block cinematic-cta font-bold text-lg px-8 py-4 transform hover:scale-105">
+                <a href="/contact" className="inline-block cinematic-cta font-bold text-lg px-8 py-4 transform hover:scale-105">
                   Get Your Free Strategy Call
                 </a>
                 <p className="text-sm mt-4 text-gray-300">

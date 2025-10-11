@@ -45,7 +45,7 @@ const PricingFAQ = () => {
           </h2>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
             Everything you need to know about our pricing and services. Can&apos;t find what you&apos;re looking for? 
-            <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 ml-1 font-semibold">
+            <a href="/contact" className="text-yellow-400 hover:text-yellow-300 ml-1 font-semibold">
               Let&apos;s talk!
             </a>
           </p>
@@ -89,7 +89,7 @@ const PricingFAQ = () => {
               <p className="text-gray-200 mb-6 text-lg leading-relaxed">
                 Our team is here to help you choose the right plan and answer any questions about our video production process.
               </p>
-              <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+              <a href="/contact">
                 <Button size="lg" className="cinematic-cta text-lg px-8 py-6">
                   Schedule a Free Consultation
                 </Button>

@@ -153,7 +153,7 @@ const ModernHeader = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+            <a href="/contact">
               <Button 
                 className="btn-gradient font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
@@ -243,7 +243,7 @@ const ModernHeader = () => {
 
             {/* Mobile CTA */}
             <div className="pt-4">
-              <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+              <a href="/contact">
                 <Button 
                   className="btn-gradient w-full font-semibold shadow-lg"
                   onClick={() => setIsMenuOpen(false)}

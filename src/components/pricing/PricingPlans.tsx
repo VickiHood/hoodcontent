@@ -76,7 +76,7 @@ const PricingPlans = () => {
                   ))}
                 </ul>
                 
-                <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer" className="w-full block">
+                <a href="/contact" className="w-full block">
                   <Button 
                     className={`w-full text-lg py-6 font-semibold transition-all duration-300 ${plan.popular 
                       ? 'cinematic-cta' 

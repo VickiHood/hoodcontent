@@ -57,7 +57,7 @@ const Header = () => {
           />
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+            <a href="/contact">
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                 Get Quote
               </Button>
@@ -86,7 +86,7 @@ const Header = () => {
               <Link to="/youtube-script-generator" className="text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Script Generator</Link>
               <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
               <div className="flex flex-col space-y-2 pt-4">
-                <a href="https://calendly.com/kvit/15-minutes-discovery-call" target="_blank" rel="noopener noreferrer">
+                <a href="/contact">
                   <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full">
                     Get Quote
                   </Button>
