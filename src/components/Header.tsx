@@ -59,7 +59,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a href="/contact">
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                Get Quote
+                Contact Us
               </Button>
             </a>
           </div>
@@ -88,7 +88,7 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4">
                 <a href="/contact">
                   <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full">
-                    Get Quote
+                    Contact Us
                   </Button>
                 </a>
               </div>

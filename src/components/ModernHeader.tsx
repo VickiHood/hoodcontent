@@ -157,7 +157,7 @@ const ModernHeader = () => {
               <Button 
                 className="btn-gradient font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                Get Quote
+                Contact Us
               </Button>
             </a>
           </div>
@@ -248,7 +248,7 @@ const ModernHeader = () => {
                   className="btn-gradient w-full font-semibold shadow-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Quote
+                  Contact Us
                 </Button>
               </a>
             </div>
