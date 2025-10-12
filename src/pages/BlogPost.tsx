@@ -183,11 +183,22 @@ const BlogPost = () => {
                     marks: {
                       strong: ({children}) => <strong className="font-bold">{children}</strong>,
                       em: ({children}) => <em className="italic">{children}</em>,
-                      link: ({children, value}) => (
-                        <a href={value.href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                          {children}
-                        </a>
-                      ),
+                      link: ({children, value}) => {
+                        const href = String(value?.href || '');
+                        const isCalendly = href.includes('calendly.com');
+                        if (isCalendly) {
+                          return (
+                            <Link to="/contact" className="text-primary hover:underline">
+                              {children}
+                            </Link>
+                          );
+                        }
+                        return (
+                          <a href={href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                            {children}
+                          </a>
+                        );
+                      },
                     },
                     list: {
                       bullet: ({children}) => <ul className="list-disc list-inside mb-4 space-y-1">{children}</ul>,

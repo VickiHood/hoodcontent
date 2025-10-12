@@ -3,7 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import ProductDemoVideos from "./pages/ProductDemoVideos";
@@ -27,6 +28,23 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
+const CalendlyLinkInterceptor = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const anchor = target?.closest('a') as HTMLAnchorElement | null;
+      if (anchor && anchor.href && anchor.href.includes('calendly.com')) {
+        e.preventDefault();
+        navigate('/contact');
+      }
+    };
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, [navigate]);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -34,6 +52,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CalendlyLinkInterceptor />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
