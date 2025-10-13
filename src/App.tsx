@@ -34,7 +34,7 @@ const CalendlyLinkInterceptor = () => {
     const handler = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
       const anchor = target?.closest('a') as HTMLAnchorElement | null;
-      if (anchor && anchor.href && anchor.href.includes('calendly.com')) {
+      if (anchor && anchor.href && (anchor.href.includes('calendly.com') || anchor.href.includes('credly.com'))) {
         e.preventDefault();
         navigate('/contact');
       }

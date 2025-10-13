@@ -185,8 +185,8 @@ const BlogPost = () => {
                       em: ({children}) => <em className="italic">{children}</em>,
                       link: ({children, value}) => {
                         const href = String(value?.href || '');
-                        const isCalendly = href.includes('calendly.com');
-                        if (isCalendly) {
+                        const isIntercepted = href.includes('calendly.com') || href.includes('credly.com');
+                        if (isIntercepted) {
                           return (
                             <Link to="/contact" className="text-primary hover:underline">
                               {children}
