@@ -25,6 +25,7 @@ import VideoProduction from "./pages/VideoProduction";
 import IGaming from "./pages/IGaming";
 import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
+import { ChatWidget } from "./components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <CalendlyLinkInterceptor />
+        <ChatWidget />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
