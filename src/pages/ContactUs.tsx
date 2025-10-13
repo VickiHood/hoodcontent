@@ -29,19 +29,42 @@ const ContactUs = () => {
               </p>
             </div>
 
-            {/* Calendly Embed */}
+            {/* Contact Form */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="cinematic-card border border-white/20 shadow-cinematic overflow-hidden">
-                <div className="aspect-[9/16] md:aspect-[16/9]">
-                  <iframe
-                    src="https://calendly.com/kvit/15-minutes-discovery-call?month=2025-10"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    title="Schedule a call with HOOD"
-                    className="w-full h-full min-h-[700px]"
-                  ></iframe>
-                </div>
+              <div className="cinematic-card border border-white/20 shadow-cinematic overflow-hidden p-6 md:p-8">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.currentTarget as HTMLFormElement;
+                    const formData = new FormData(form);
+                    const name = String(formData.get('name') || '');
+                    const email = String(formData.get('email') || '');
+                    const message = String(formData.get('message') || '');
+                    const subject = encodeURIComponent(`Consultation request from ${name || 'Website visitor'}`);
+                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                    window.location.href = `mailto:hello@hood.club?subject=${subject}&body=${body}`;
+                  }}
+                  className="grid gap-6"
+                >
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">Name</label>
+                      <input id="name" name="name" type="text" required className="w-full bg-black/30 border border-white/20 rounded-md px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/60" placeholder="Your name" />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">Email</label>
+                      <input id="email" name="email" type="email" required className="w-full bg-black/30 border border-white/20 rounded-md px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/60" placeholder="you@company.com" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-2">Message</label>
+                    <textarea id="message" name="message" rows={5} className="w-full bg-black/30 border border-white/20 rounded-md px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/60" placeholder="Tell us about your project"></textarea>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <button type="submit" className="cinematic-cta text-lg px-10 py-4 font-semibold rounded-md">Send Email</button>
+                    <a href="mailto:hello@hood.club" className="text-yellow-400 hover:text-yellow-300">Or email us directly</a>
+                  </div>
+                </form>
               </div>
             </div>
 
