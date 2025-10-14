@@ -75,10 +75,11 @@ export const ChatWidget = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 group relative w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse z-50"
+          className="fixed bottom-6 right-6 group relative w-16 h-16 bg-yellow-400 hover:bg-yellow-500 rounded-full shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 flex items-center justify-center hover:scale-110 z-[9999]"
+          style={{ animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}
         >
           <Bot className="h-8 w-8 text-black group-hover:rotate-12 transition-transform duration-300" />
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-ping"></span>
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white" style={{ animation: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite' }}></span>
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></span>
         </button>
       )}
