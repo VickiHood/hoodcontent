@@ -42,7 +42,7 @@ const ContactUs = () => {
                     const message = String(formData.get('message') || '');
                     const subject = encodeURIComponent(`Consultation request from ${name || 'Website visitor'}`);
                     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-                    window.location.href = `mailto:hello@hood.club?subject=${subject}&body=${body}`;
+                    window.location.href = `mailto:victorkoech996@gmail.com?subject=${subject}&body=${body}`;
                   }}
                   className="grid gap-6"
                 >
@@ -62,7 +62,7 @@ const ContactUs = () => {
                   </div>
                   <div className="flex items-center justify-between gap-4">
                     <button type="submit" className="cinematic-cta text-lg px-10 py-4 font-semibold rounded-md">Send Email</button>
-                    <a href="mailto:hello@hood.club" className="text-yellow-400 hover:text-yellow-300">Or email us directly</a>
+                    <a href="mailto:victorkoech996@gmail.com" className="text-yellow-400 hover:text-yellow-300">Or email us directly</a>
                   </div>
                 </form>
               </div>
@@ -85,8 +85,8 @@ const ContactUs = () => {
                   <Mail className="h-6 w-6 text-yellow-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                <a href="mailto:hello@hood.club" className="text-yellow-400 hover:text-yellow-300 text-sm">
-                  hello@hood.club
+                <a href="mailto:victorkoech996@gmail.com" className="text-yellow-400 hover:text-yellow-300 text-sm">
+                  victorkoech996@gmail.com
                 </a>
               </div>
 
