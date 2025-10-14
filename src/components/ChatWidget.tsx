@@ -13,6 +13,7 @@ interface Message {
 
 export const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -74,10 +75,21 @@ export const ChatWidget = () => {
     <>
       {!isOpen && (
         <div className="fixed bottom-6 right-6 z-[9999]">
-          <div className="absolute -top-16 right-0 bg-background border border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in mb-2">
-            <p className="text-sm font-medium whitespace-nowrap">Ask me about video production! 🎬</p>
-            <div className="absolute -bottom-1 right-6 w-2 h-2 bg-background border-r border-b border-border rotate-45"></div>
-          </div>
+          {showNotification && (
+            <div className="absolute -top-16 right-0 bg-background border border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in mb-2">
+              <div className="flex items-center gap-2">
+                <p className="text-sm font-medium whitespace-nowrap">Ask me about video production! 🎬</p>
+                <button
+                  onClick={() => setShowNotification(false)}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="Close notification"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+              <div className="absolute -bottom-1 right-6 w-2 h-2 bg-background border-r border-b border-border rotate-45"></div>
+            </div>
+          )}
           <button
             onClick={() => setIsOpen(true)}
             className="group relative w-16 h-16 bg-yellow-400 hover:bg-yellow-500 rounded-full shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 flex items-center justify-center hover:scale-110"
