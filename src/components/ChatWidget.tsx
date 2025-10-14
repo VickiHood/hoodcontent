@@ -73,15 +73,21 @@ export const ChatWidget = () => {
   return (
     <>
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 group relative w-16 h-16 bg-yellow-400 hover:bg-yellow-500 rounded-full shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 flex items-center justify-center hover:scale-110 z-[9999]"
-          style={{ animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}
-        >
-          <Bot className="h-8 w-8 text-black group-hover:rotate-12 transition-transform duration-300" />
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white" style={{ animation: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite' }}></span>
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></span>
-        </button>
+        <div className="fixed bottom-6 right-6 z-[9999]">
+          <div className="absolute -top-16 right-0 bg-background border border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in mb-2">
+            <p className="text-sm font-medium whitespace-nowrap">Ask me about video production! 🎬</p>
+            <div className="absolute -bottom-1 right-6 w-2 h-2 bg-background border-r border-b border-border rotate-45"></div>
+          </div>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="group relative w-16 h-16 bg-yellow-400 hover:bg-yellow-500 rounded-full shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 flex items-center justify-center hover:scale-110"
+            style={{ animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}
+          >
+            <Bot className="h-8 w-8 text-black group-hover:rotate-12 transition-transform duration-300" />
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white" style={{ animation: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite' }}></span>
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></span>
+          </button>
+        </div>
       )}
 
       {isOpen && (
