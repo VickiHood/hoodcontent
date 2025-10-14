@@ -96,7 +96,7 @@ const ContactUs = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
                 <p className="text-gray-300 text-sm">
-                  Lisbon, Portugal<br />
+                  Nairobi, Kenya<br />
                   Remote-first team
                 </p>
               </div>
