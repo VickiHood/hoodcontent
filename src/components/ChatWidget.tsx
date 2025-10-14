@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, X, Send, Bot } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { ScrollArea } from "./ui/scroll-area";
@@ -73,21 +73,22 @@ export const ChatWidget = () => {
   return (
     <>
       {!isOpen && (
-        <Button
+        <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50"
-          size="icon"
+          className="fixed bottom-6 right-6 group relative w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse z-50"
         >
-          <MessageCircle className="h-6 w-6" />
-        </Button>
+          <Bot className="h-8 w-8 text-black group-hover:rotate-12 transition-transform duration-300" />
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-ping"></span>
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></span>
+        </button>
       )}
 
       {isOpen && (
         <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-background border border-border rounded-lg shadow-2xl flex flex-col z-50">
           <div className="flex items-center justify-between p-4 border-b border-border">
             <div className="flex items-center gap-2">
-              <MessageCircle className="h-5 w-5 text-primary" />
-              <h3 className="font-semibold">Chat with us</h3>
+              <Bot className="h-5 w-5 text-yellow-400" />
+              <h3 className="font-semibold">AI Assistant</h3>
             </div>
             <Button
               variant="ghost"
