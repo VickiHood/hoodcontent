@@ -2,8 +2,40 @@ import ModernHeader from '@/components/ModernHeader';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+import { useState } from 'react';
 
 const ContactUs = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-contact', {
+        body: { name, email, message }
+      });
+
+      if (error) throw error;
+
+      toast.success('Message sent successfully! We\'ll get back to you soon.');
+      form.reset();
+    } catch (error: any) {
+      console.error('Error submitting contact form:', error);
+      toast.error('Failed to send message. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen cinematic-section">
       <SEO 
@@ -33,17 +65,7 @@ const ContactUs = () => {
             <div className="max-w-4xl mx-auto mb-16">
               <div className="cinematic-card border border-white/20 shadow-cinematic overflow-hidden p-6 md:p-8">
                 <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const form = e.currentTarget as HTMLFormElement;
-                    const formData = new FormData(form);
-                    const name = String(formData.get('name') || '');
-                    const email = String(formData.get('email') || '');
-                    const message = String(formData.get('message') || '');
-                    const subject = encodeURIComponent(`Consultation request from ${name || 'Website visitor'}`);
-                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-                    window.location.href = `mailto:victorkoech996@gmail.com?subject=${subject}&body=${body}`;
-                  }}
+                  onSubmit={handleSubmit}
                   className="grid gap-6"
                 >
                   <div className="grid md:grid-cols-2 gap-6">
@@ -61,7 +83,13 @@ const ContactUs = () => {
                     <textarea id="message" name="message" rows={5} className="w-full bg-black/30 border border-white/20 rounded-md px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/60" placeholder="Tell us about your project"></textarea>
                   </div>
                   <div className="flex items-center justify-between gap-4">
-                    <button type="submit" className="cinematic-cta text-lg px-10 py-4 font-semibold rounded-md">Send Email</button>
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="cinematic-cta text-lg px-10 py-4 font-semibold rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </button>
                     <a href="mailto:victorkoech996@gmail.com" className="text-yellow-400 hover:text-yellow-300">Or email us directly</a>
                   </div>
                 </form>
