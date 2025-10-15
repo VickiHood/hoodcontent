@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Bot } from "lucide-react";
+import { MessageCircle, X, Send, Bot, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { ScrollArea } from "./ui/scroll-area";
 import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface Message {
   role: "user" | "assistant";
@@ -76,12 +76,25 @@ export const ChatWidget = () => {
       {!isOpen && (
         <div className="fixed bottom-6 right-6 z-[9999]">
           {showNotification && (
-            <div className="absolute -top-16 right-0 bg-background border border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in mb-2">
-              <div className="flex items-center gap-2">
-                <p className="text-sm font-medium whitespace-nowrap">Ask me about video production! 🎬</p>
+            <div className="absolute -top-20 right-0 bg-background border border-border rounded-lg px-4 py-3 shadow-lg animate-fade-in mb-2 min-w-[280px]">
+              <div className="flex items-start gap-3">
+                <div className="flex-1">
+                  <p className="text-sm font-medium mb-2">🎬 Free SaaS Video Guide!</p>
+                  <a
+                    href="/saas-video-production-guide.pdf"
+                    download="HOOD-SaaS-Video-Production-Guide.pdf"
+                    className="inline-flex items-center gap-1.5 text-xs bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1.5 rounded-md font-medium transition-colors"
+                    onClick={() => {
+                      setTimeout(() => setShowNotification(false), 500);
+                    }}
+                  >
+                    <Download className="h-3 w-3" />
+                    Download Guide
+                  </a>
+                </div>
                 <button
                   onClick={() => setShowNotification(false)}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
                   aria-label="Close notification"
                 >
                   <X className="h-4 w-4" />
