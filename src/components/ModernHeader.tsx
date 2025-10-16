@@ -57,6 +57,12 @@ const ModernHeader = () => {
     { name: 'Blog', href: '/blog' }
   ];
 
+  const aiToolsItems = [
+    { name: 'AI Video Ideas', href: '/ai-video-ideas' },
+    { name: 'AI Script Analyzer', href: '/ai-script-analyzer' },
+    { name: 'AI Thumbnail Generator', href: '/ai-thumbnail-generator' }
+  ];
+
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -136,12 +142,25 @@ const ModernHeader = () => {
               Case Study
             </Link>
 
-            <Link 
-              to="/youtube-script-generator" 
-              className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
-            >
-              Script Generator
-            </Link>
+            {/* AI Tools Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium focus:outline-none whitespace-nowrap">
+                <span>AI Tools</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-background/95 backdrop-blur-xl border border-border/50 shadow-xl">
+                {aiToolsItems.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link 
+                      to={item.href}
+                      className="w-full text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Link 
               to="/about" 
@@ -217,6 +236,21 @@ const ModernHeader = () => {
             >
               How It Works
             </Link>
+
+            {/* Mobile AI Tools */}
+            <div className="space-y-2">
+              <div className="text-foreground font-medium py-2">AI Tools</div>
+              {aiToolsItems.map((item) => (
+                <Link 
+                  key={item.href}
+                  to={item.href}
+                  className="block text-muted-foreground hover:text-primary transition-colors duration-200 pl-4 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
 
             {/* Mobile Resources */}
             <div className="space-y-2">

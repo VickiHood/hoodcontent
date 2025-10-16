@@ -24,6 +24,9 @@ import Blog from "./pages/Blog";
 import VideoProduction from "./pages/VideoProduction";
 import IGaming from "./pages/IGaming";
 import ContactUs from "./pages/ContactUs";
+import AIVideoIdeas from "./pages/AIVideoIdeas";
+import AIScriptAnalyzer from "./pages/AIScriptAnalyzer";
+import AIThumbnailGenerator from "./pages/AIThumbnailGenerator";
 import ScrollToTop from "./components/ScrollToTop";
 import { ChatWidget } from "./components/ChatWidget";
 
@@ -74,6 +77,9 @@ const App = () => (
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/ai-video-ideas" element={<AIVideoIdeas />} />
+          <Route path="/ai-script-analyzer" element={<AIScriptAnalyzer />} />
+          <Route path="/ai-thumbnail-generator" element={<AIThumbnailGenerator />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
