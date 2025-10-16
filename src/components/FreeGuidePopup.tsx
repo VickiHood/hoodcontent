@@ -47,10 +47,10 @@ const FreeGuidePopup = () => {
         description: "Your free guide is downloading now. Check your email for more resources!",
       });
 
-      // Trigger PDF download (you'll need to add your actual PDF file)
+      // Trigger PDF download
       const link = document.createElement('a');
-      link.href = '/path-to-your-guide.pdf'; // Replace with actual PDF path
-      link.download = 'Video-Funnels-That-Sell-SaaS.pdf';
+      link.href = '/saas-video-production-guide.pdf';
+      link.download = 'HOOD-SaaS-Video-Production-Guide.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
