@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import FreeGuidePopup from '@/components/FreeGuidePopup';
-import { MessageCircle, Figma, FileText, Download, Gift } from 'lucide-react';
+import { MessageCircle, Figma, FileText } from 'lucide-react';
 
 const Index = () => {
   const services = [
@@ -52,36 +52,6 @@ const Index = () => {
       <SmartBar />
       <ModernHeader />
       <Hero />
-      
-      {/* Free Guide Download Section */}
-      <section className="py-16 cinematic-section relative overflow-hidden">
-        <div className="absolute inset-0 cinematic-grain opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="cinematic-card border border-yellow-400/30 p-8 md:p-12 text-center shadow-cinematic">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-400/20 rounded-full mb-6 animate-pulse">
-              <Gift className="h-10 w-10 text-yellow-400" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 cinematic-text-shadow">
-              Free Ultimate SaaS Video Production Guide
-            </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Learn the proven strategies top SaaS companies use to create high-converting video content. 
-              Download our comprehensive guide now!
-            </p>
-            <a
-              href="/saas-video-production-guide.pdf"
-              download="HOOD-SaaS-Video-Production-Guide.pdf"
-              className="inline-flex items-center gap-3 cinematic-cta text-lg px-8 py-4 font-semibold rounded-md hover:scale-105 transition-all duration-300"
-            >
-              <Download className="h-5 w-5" />
-              Download Free Guide (PDF)
-            </a>
-            <p className="text-sm text-gray-400 mt-4">
-              No email required • Instant download
-            </p>
-          </div>
-        </div>
-      </section>
       
       <div id="services">
         <Services />
