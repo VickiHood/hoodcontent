@@ -1,18 +1,23 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const ModernHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   // Handle scroll for sticky behavior
   useEffect(() => {
@@ -190,8 +195,8 @@ const ModernHeader = () => {
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          {/* CTA Button / User Menu */}
+          <div className="hidden md:flex items-center space-x-4">
             <a href="/contact">
               <Button 
                 className="btn-gradient font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -199,6 +204,34 @@ const ModernHeader = () => {
                 Contact Us
               </Button>
             </a>
+            
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+                    <Avatar className="h-10 w-10">
+                      <AvatarFallback className="bg-primary text-primary-foreground">
+                        {user.email?.charAt(0).toUpperCase() || 'U'}
+                      </AvatarFallback>
+                    </Avatar>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56 bg-background/95 backdrop-blur-xl border border-border/50">
+                  <DropdownMenuItem disabled className="flex flex-col items-start">
+                    <span className="text-sm font-medium">{user.email}</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => signOut()} className="text-destructive cursor-pointer">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Log out</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Button variant="outline" onClick={() => navigate('/auth')}>
+                Sign In
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -296,7 +329,7 @@ const ModernHeader = () => {
             </Link>
 
             {/* Mobile CTA */}
-            <div className="pt-4">
+            <div className="pt-4 space-y-2">
               <a href="/contact">
                 <Button 
                   className="btn-gradient w-full font-semibold shadow-lg"
@@ -305,6 +338,31 @@ const ModernHeader = () => {
                   Contact Us
                 </Button>
               </a>
+              
+              {user ? (
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    signOut();
+                  }}
+                >
+                  <LogOut className="mr-2 h-4 w-4" />
+                  Log out
+                </Button>
+              ) : (
+                <Button 
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    navigate('/auth');
+                  }}
+                >
+                  Sign In
+                </Button>
+              )}
             </div>
           </nav>
         </div>

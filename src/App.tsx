@@ -27,8 +27,10 @@ import ContactUs from "./pages/ContactUs";
 import AIVideoIdeas from "./pages/AIVideoIdeas";
 import AIScriptAnalyzer from "./pages/AIScriptAnalyzer";
 import AIThumbnailGenerator from "./pages/AIThumbnailGenerator";
+import Auth from "./pages/Auth";
 import ScrollToTop from "./components/ScrollToTop";
 import { ChatWidget } from "./components/ChatWidget";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -70,16 +72,17 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/youtube-strategy" element={<YouTubeStrategy />} />
-        <Route path="/youtube-script-generator" element={<YouTubeScriptGenerator />} />
-        <Route path="/script-generator" element={<ScriptGenerator />} />
           <Route path="/video-production" element={<VideoProduction />} />
           <Route path="/services/igaming" element={<IGaming />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/ai-video-ideas" element={<AIVideoIdeas />} />
-          <Route path="/ai-script-analyzer" element={<AIScriptAnalyzer />} />
-          <Route path="/ai-thumbnail-generator" element={<AIThumbnailGenerator />} />
+          <Route path="/ai-video-ideas" element={<ProtectedRoute><AIVideoIdeas /></ProtectedRoute>} />
+          <Route path="/ai-script-analyzer" element={<ProtectedRoute><AIScriptAnalyzer /></ProtectedRoute>} />
+          <Route path="/ai-thumbnail-generator" element={<ProtectedRoute><AIThumbnailGenerator /></ProtectedRoute>} />
+          <Route path="/youtube-script-generator" element={<ProtectedRoute><YouTubeScriptGenerator /></ProtectedRoute>} />
+          <Route path="/script-generator" element={<ProtectedRoute><ScriptGenerator /></ProtectedRoute>} />
+          <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
