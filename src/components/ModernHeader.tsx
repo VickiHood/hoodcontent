@@ -60,7 +60,9 @@ const ModernHeader = () => {
   const aiToolsItems = [
     { name: 'AI Video Ideas', href: '/ai-video-ideas' },
     { name: 'AI Script Analyzer', href: '/ai-script-analyzer' },
-    { name: 'AI Thumbnail Generator', href: '/ai-thumbnail-generator' }
+    { name: 'AI Thumbnail Generator', href: '/ai-thumbnail-generator' },
+    { name: 'YouTube Script Generator', href: '/youtube-script-generator' },
+    { name: 'Script Generator', href: '/script-generator' }
   ];
 
   return (
