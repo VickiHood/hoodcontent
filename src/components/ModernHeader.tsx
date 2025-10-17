@@ -60,9 +60,7 @@ const ModernHeader = () => {
   const aiToolsItems = [
     { name: 'AI Video Ideas', href: '/ai-video-ideas' },
     { name: 'AI Script Analyzer', href: '/ai-script-analyzer' },
-    { name: 'AI Thumbnail Generator', href: '/ai-thumbnail-generator' },
-    { name: 'YouTube Script Generator', href: '/youtube-script-generator' },
-    { name: 'Script Generator', href: '/script-generator' }
+    { name: 'AI Thumbnail Generator', href: '/ai-thumbnail-generator' }
   ];
 
   return (
@@ -152,6 +150,26 @@ const ModernHeader = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-background/95 backdrop-blur-xl border border-border/50 shadow-xl">
                 {aiToolsItems.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link 
+                      to={item.href}
+                      className="w-full text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Resources Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium focus:outline-none whitespace-nowrap">
+                <span>Resources</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-background/95 backdrop-blur-xl border border-border/50 shadow-xl">
+                {resourcesItems.map((item) => (
                   <DropdownMenuItem key={item.href} asChild>
                     <Link 
                       to={item.href}
